@@ -98,7 +98,7 @@ int endSTimer();
 /// @brief Create a timer and set params and handle function
 /// @param id Id
 /// @param period Period of time
-/// @param repetitions Repetitions
+/// @param repetitions Repetitions. (Infinite loop = -1)
 /// @param handlerCBfunc Handler callback function will be triggered when the timer is over each repetition
 /// @param pArgs Pointer to Arguments that will be passaed to callback function 
 /// @param sizeArg Size in bytes of pArgs
@@ -108,14 +108,14 @@ int createSTimerCB(stimer_t *id, int period, int repetitions, pHandler_t handler
 /// @brief Create a timer without a callback funcion and set params 
 /// @param id Id
 /// @param period Period of time
-/// @param repetitions Repetitions
+/// @param repetitions Repetitions. (Infinite loop = -1)
 /// @return 1 on success 0 on failure
 int createSTimer(stimer_t *id, int period, int repetitions);
 
 /// @brief Set params and handle to the specific timer
 /// @param id Id
 /// @param period Period of time
-/// @param repetitions Repetitions
+/// @param repetitions Repetitions. (Infinite loop = -1)
 /// @param handlerCBfunc Handler callback function will be triggered when the timer is over each repetition
 /// @param pArgs Pointer to Arguments that will be passaed to callback function 
 /// @param sizeArg Size in bytes of pArgs
